@@ -1,30 +1,172 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search</title>
+
+<style>
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+#map {
+    position: relative;
+    width: 1000px;
+    height: 700px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.box {
+    position: absolute;
+    border: 2px solid black;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* 上の横列 */
+.drink-pack {
+    top: 20px;
+    left: 220px;
+    width: 140px;
+    height: 60px;
+}
+
+.sweets {
+    top: 20px;
+    left: 380px;
+    width: 140px;
+    height: 60px;
+}
+
+.sandwich {
+    top: 20px;
+    left: 540px;
+    width: 140px;
+    height: 60px;
+}
+
+.rice {
+    top: 20px;
+    left: 700px;
+    width: 140px;
+    height: 60px;
+}
+
+/* 左の縦列 */
+.bread {
+    top: 310px;
+    left: 20px;
+    width: 160px;
+    height: 60px;
+}
+
+.bento {
+    top: 230px;
+    left: 20px;
+    width: 160px;
+    height: 60px;
+}
+
+.petdrink {
+    top: 150px;
+    left: 20px;
+    width: 160px;
+    height: 60px;
+}
+
+/* 棚 */
+.rack {
+    position: absolute;
+    width: 60px;
+    height: 260px;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    writing-mode: vertical-rl;
+    font-weight: bold;
+}
+
+.rack1 {
+    top: 180px;
+    left: 300px;
+}
+
+.rack2 {
+    top: 180px;
+    left: 500px;
+}
+
+.rack3 {
+    top: 180px;
+    left: 700px;
+}
+
+/* レジ */
+.register {
+    position: absolute;
+    bottom: 30px;
+    left: 420px;
+    width: 160px;
+    height: 80px;
+    border: 2px solid black;
+    background: #ffe599;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+</style>
 </head>
+
 <body>
-    <h1>Search</h1>
 
-    <form>
-        <label for="item-input">商品名</label>
-        <input id="item-input" name="item" type="text">
-        <button id="search-button" type="submit">検索</button>
-    </form>
+<h1>Search</h1>
 
-    <p>売り場: <span id="item-place" aria-live="polite"></span></p>
+<form>
+    <label for="item-input">商品名</label>
+    <input id="item-input" name="item" type="text">
+    <button id="search-button" type="submit">検索</button>
+</form>
 
-    <h2>店内マップ</h2>
+<p>売り場: <span id="item-place"></span></p>
 
-    <div id="map">
-        <div class="area">パン</div>
-        <div class="area">総菜</div>
-        <div class="area">祭事</div>
-    </div>
+<h2>店内マップ</h2>
 
-    <script src="app.js"></script>
+<div id="map">
+
+    <!-- 上の横列 -->
+    <div class="box drink-pack">紙パック飲み物</div>
+    <div class="box sweets">スイーツ</div>
+    <div class="box sandwich">サンドイッチ</div>
+    <div class="box rice">おにぎり・弁当</div>
+
+    <!-- 左の縦列 -->
+    <div class="box petdrink">ペットボトル飲み物</div>
+    <div class="box bento">弁当</div>
+    <div class="box bread">パン</div>
+
+    <!-- 棚 -->
+    <div class="rack rack1"></div>
+    <div class="rack rack2">お菓子</div>
+    <div class="rack rack3"></div>
+
+    <!-- レジ -->
+    <div class="register">レジ</div>
+
+</div>
+
 </body>
 </html>
