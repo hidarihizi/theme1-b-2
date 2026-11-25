@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Search</h1>
+    <h1>Search</h1>
 
-<form>
-    <label for="item-input">商品名</label>
-    <input id="item-input" name="item" type="text">
-    <button id="search-button" type="submit">検索</button>
-</form>
+    <form>
+        <label for="item-input">商品名</label>
+        <input id="item-input" name="item" type="text">
+        <button id="search-button" type="submit">検索</button>
+    </form>
 
-<p>売り場: <span id="item-place"></span></p>
+    <p>売り場: <span id="item-place"></span></p>
 
-<h2>店内マップ</h2>
+    <h2>店内マップ</h2>
 
-<div id="map">
+    <div id="map">
 
-    <!-- 上の横列 -->
-    <div class="box drink-pack">紙パック飲み物</div>
-    <div class="box sweets">スイーツ</div>
-    <div class="box sandwich">サンドイッチ</div>
-    <div class="box rice">おにぎり・弁当</div>
+        <!-- 上の横列 -->
+        <div id="drink-pack" class="box drink-pack">紙パック飲み物</div>
+        <div id="sweets" class="box sweets">スイーツ</div>
+        <div id="sandwich" class="box sandwich">サンドイッチ</div>
+        <div id="rice" class="box rice">おにぎり・弁当</div>
 
-    <!-- 左の縦列 -->
-    <div class="box petdrink">ペットボトル飲み物</div>
-    <div class="box bento">弁当</div>
-    <div class="box bread">パン</div>
+        <!-- 左の縦列 -->
+        <div id="petdrink" class="box petdrink">ペットボトル飲み物</div>
+        <div id="bento" class="box bento">弁当</div>
+        <div id="bread" class="box bread">パン</div>
 
-    <!-- 棚 -->
-    <div class="rack rack1"></div>
-    <div class="rack rack2">お菓子</div>
-    <div class="rack rack3"></div>
+        <!-- 棚 -->
+        <div class="rack rack1"></div>
+        <div id="rack2" class="rack rack2">お菓子</div>
+        <div class="rack rack3"></div>
 
-    <!-- レジ -->
-    <div class="register">レジ</div>
+        <!-- レジ -->
+        <div class="register">レジ</div>
 
-</div>
+    </div>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
