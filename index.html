@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Search</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Search</h1>
-	<form>
-		<label for="item-input">商品名</label>
-		<input id="item-input" name="item" type="text">
-		<button id="search-button" type="submit">検索</button>
-	</form>
-	<p>売り場: <span id="item-place" aria-live="polite"></span></p>
+    <h1>Search</h1>
 
-	<script src="app.js"></script>
+    <form>
+        <label for="item-input">商品名</label>
+        <input id="item-input" name="item" type="text">
+        <button id="search-button" type="submit">検索</button>
+    </form>
+
+    <p>売り場: <span id="item-place" aria-live="polite"></span></p>
+
+    <h2>店内マップ</h2>
+
+    <div id="map">
+        <div class="area">パン</div>
+        <div class="area">総菜</div>
+        <div class="area">祭事</div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
