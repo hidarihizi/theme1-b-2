@@ -8,26 +8,13 @@
 </head>
 <body>
 	<h1>Search</h1>
-	<p class="lead">生協コンビニで、欲しい商品の売り場を探せます。</p>
-
-	<form id="search-form">
+	<form>
 		<label for="item-input">商品名</label>
-		<div class="search-row">
-			<input id="item-input" name="item" type="text" list="item-names" placeholder="例: おにぎり、ルーズリーフ">
-			<button id="search-button" type="submit">検索</button>
-		</div>
-		<datalist id="item-names"></datalist>
+		<input id="item-input" name="item" type="text">
+		<button id="search-button" type="submit">検索</button>
 	</form>
+	<p>売り場: <span id="item-place" aria-live="polite"></span></p>
 
-	<div class="result">
-		<p>売り場: <span id="item-place" aria-live="polite">—</span></p>
-		<ul id="result-list"></ul>
-	</div>
-
-	<h2>店内マップ</h2>
-	<svg id="store-map" viewBox="0 0 400 520" role="img" aria-label="店内マップ"></svg>
-
-	<script src="data.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>
